@@ -19,16 +19,13 @@ const criarTarefa = (event) => {
             <img src="./img/check.png" width="32" alt="Botão de Finalizar Tarefa"
                 title="Botão de finalizar Tarefa">
         </div>
-    </div>
     </div>`
         tarefas.insertAdjacentHTML('beforeend', tarefaNova)
 
         let objTarefaNova = tarefas.lastElementChild
-
         let btnCheckTarefa = objTarefaNova.lastElementChild.lastElementChild
-
-        btnCheckTarefa.onClick = (event) =>{
-            
+        btnCheckTarefa.onclick = (event) =>{
+            event.target.parentNode.parentNode.parentNode.remove()
         }
     }
 }
