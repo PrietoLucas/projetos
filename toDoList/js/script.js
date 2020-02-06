@@ -28,7 +28,10 @@ const mostrarTela = arrayTarefas=>{
         let objTarefaNova = tarefas.lastElementChild
         let btnCheckTarefa = objTarefaNova.lastElementChild.lastElementChild
         btnCheckTarefa.onclick = (event) =>{
-            event.target.parentNode.parentNode.parentNode.remove()
+            tarefas.removeChild(event.target.parentNode.parentNode.parentNode)
+            listaTarefas = listaTarefas.filter(valor=> valor != textoTarefa)
+
+            salvarLocalStorage(listaTarefas)
         }
     })
 }
@@ -60,7 +63,10 @@ const criarTarefa = (event) => {
         let objTarefaNova = tarefas.lastElementChild
         let btnCheckTarefa = objTarefaNova.lastElementChild.lastElementChild
         btnCheckTarefa.onclick = (event) =>{
-            event.target.parentNode.parentNode.parentNode.remove()
+            tarefas.removeChild(event.target.parentNode.parentNode.parentNode)
+            listaTarefas = listaTarefas.filter(valor=> valor != valorDigitado)
+
+            salvarLocalStorage(listaTarefas)
         }
     }
 }
