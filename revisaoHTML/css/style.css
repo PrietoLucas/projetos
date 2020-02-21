@@ -1,0 +1,52 @@
+* {
+    font-family: Aruial, Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+}
+/* ---início header--- */
+header {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search input{
+    height: 25px;
+    padding-left: 5px;
+}
+
+.search button{
+    background-color: #006172;
+    color: #ffffff;
+    border: none;
+    height: 31px;
+    cursor: pointer;
+
+}
+
+.search button:hover {
+    background-color: #09859a;
+}
+
+.login a{
+    color: #8d8178;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login a::before {
+    content: "";
+    background-image: url(../img/header/user.png);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    margin-left: -24px;
+    margin-top: -4px;
+    background-position: 6px 113px;
+    background-size: 24px;
+}
+
+/* ---final header--- */
